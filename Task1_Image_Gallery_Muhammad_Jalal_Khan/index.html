@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery @codeAlpha - Muhammad Jalal Khan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Image Gallery</h1>
+            <p>Task 1 | Student Name: <span>Muhammad Jalal Khan</span></p>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="top-bar">
+            <input type="text" id="searchInput" placeholder="Search images...">
+            
+            <div class="filter-buttons">
+                <button class="btn active" onclick="filterGallery('all')">All</button>
+                <button class="btn" onclick="filterGallery('nature')">Nature</button>
+                <button class="btn" onclick="filterGallery('architecture')">Architecture</button>
+                <button class="btn" onclick="filterGallery('technology')">Technology</button>
+                <button class="btn" onclick="filterGallery('animals')">Animals</button>
+            </div>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <button class="nav-btn prev-btn" onclick="prevImage()">&#10094;</button>
+        <div class="lightbox-box">
+            <img id="lightboxImg" src="" alt="Gallery Image">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxCount"></p>
+            </div>
+        </div>
+        <button class="nav-btn next-btn" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2k26@mjalalkhan. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
